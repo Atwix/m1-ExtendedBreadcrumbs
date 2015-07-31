@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!--
+/**
+* Atwix
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the Open Software License (OSL 3.0)
+* that is bundled with this package in the file LICENSE.txt.
+* It is also available through the world-wide-web at this URL:
+* http://opensource.org/licenses/osl-3.0.php
+* If you did not receive a copy of the license and are unable to
+* obtain it through the world-wide-web, please send an email
+* to license@magentocommerce.com so we can send you a copy immediately.
+
+* @category    Atwix
+* @package     Atwix_Breadcrumbs
+* @author      Atwix Core Team
+* @copyright   Copyright (c) 2014 Atwix (http://www.atwix.com)
+* @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+*/
+-->
+<config>
+    <modules>
+        <Atwix_Breadcrumbs>
+            <version>0.1.0</version>
+        </Atwix_Breadcrumbs>
+    </modules>
+    <global>
+        <blocks>
+            <page>
+                <rewrite>
+                    <html_breadcrumbs>Atwix_Breadcrumbs_Block_Html_Breadcrumbs</html_breadcrumbs>
+                </rewrite>
+            </page>
+        </blocks>
+        <helpers>
+            <atwix_breadcrumbs>
+                <class>Atwix_Breadcrumbs_Helper</class>
+            </atwix_breadcrumbs>
+        </helpers>
+    </global>
+
+    <default>
+        <atwix_breadcrumbs>
+            <atwix_breadcrumbs>
+                <enabled><![CDATA[1]]></enabled>
+            </atwix_breadcrumbs>
+        </atwix_breadcrumbs>
+    </default>
+</config>
