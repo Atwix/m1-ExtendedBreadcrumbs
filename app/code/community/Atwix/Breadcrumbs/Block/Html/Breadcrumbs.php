@@ -38,13 +38,13 @@ class Atwix_Breadcrumbs_Block_Html_Breadcrumbs  extends Mage_Page_Block_Html_Bre
      */
     protected $_crumbs = null;
 
-    function _construct()
+    public function __construct()
     {
-        parent::_construct();
-        $this->setTemplate('page/html/breadcrumbs.phtml');
+        parent::__construct();
+        $this->setTemplate('atwix/page/html/breadcrumbs.phtml');
     }
 
-    function addCrumb($crumbName, $crumbInfo, $after = false)
+    public function addCrumb($crumbName, $crumbInfo, $after = false)
     {
         if ($after) {
             $this->_prepareArray($crumbInfo, array('label', 'title', 'link', 'first', 'last', 'readonly'));
@@ -66,6 +66,7 @@ class Atwix_Breadcrumbs_Block_Html_Breadcrumbs  extends Mage_Page_Block_Html_Bre
                 $this->_crumbs[$crumbName] = $crumbInfo;
             }
         }
+
         return $this;
     }
 
